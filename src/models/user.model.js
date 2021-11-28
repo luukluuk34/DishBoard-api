@@ -3,23 +3,23 @@ const Schema = mongoose.Schema;
 const getModel = require('./model_cache');
 
 const UserSchema = new Schema({
-    FirstName:{
+    firstName:{
         type: String,
         required:true,
     },
-    LastName:{
+    lastName:{
         type:String,
         required:true,
     },
-    Email:{
+    email:{
         type:String,
         required:true,
         unique:[true,"User needs to have a unique e-mail"]
     },
-    About:{
+    about:{
         type:String,
     },
-    DateOfBirth:{
+    dateOfBirth:{
         type:Date,
         required:true,
     },

@@ -31,7 +31,7 @@ app.use(helmet())
 app.use(morgan('dev'))
 
 const userRoutes = require('./routes/user.routes')
-// const productRoutes = require('./routes/product.routes')
+const recipeRoutes = require('./routes/recipe.routes')
 // const reviewRoutes = require('./routes/review.routes')
 // const recommendationRoutes = require('./routes/recommendation.routes')
 
@@ -39,7 +39,7 @@ const userRoutes = require('./routes/user.routes')
 //const errors = require('./errors')
 
 app.use('/user', userRoutes)
-//app.use('/product', productRoutes)
+app.use('/recipe', recipeRoutes)
 //app.use('/', reviewRoutes)
 //app.use('/', recommendationRoutes)
 

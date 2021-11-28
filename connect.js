@@ -10,7 +10,7 @@ const options = {
 
 async function mongo(dbName) {
     try {
-        await mongoose.connect(`${process.env.MONGO_URL}/${dbName}`, options)
+        await mongoose.connect(`${dbName}`, options)
         console.log(`connection to mongo DB ${dbName} established`)
     } catch (err) {
         console.error(err)

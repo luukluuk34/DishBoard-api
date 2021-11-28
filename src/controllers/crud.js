@@ -11,6 +11,7 @@ class CrudController {
     // we HAVE to use lambda functions here, as they have
     // lexical scope for 'this'
     create = async (req, res, next) => {
+        console.log(req.body);
         const entity = new this.model(req.body)
         await entity.save()
         res.status(201).json({id: entity.id})
